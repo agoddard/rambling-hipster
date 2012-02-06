@@ -34,9 +34,5 @@ if (rand(5) == 4)
 else
   status = "You probably haven't heard of #{sentence}."
 end
-#puts potlucks.sample
-puts status
-#Twitter.update("You probably haven't heard of gluten-free mcsweeney's organics.")
-#Twitter.update(status)
-#Twitter.update("Wanna have a cosby sweater potluck?")
 
+Twitter.update(status)
