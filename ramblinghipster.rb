@@ -11,7 +11,17 @@ end
 
 
 response = conn.get '/api/?paras=15&type=hipster-centric' 
-sentence = response.body.split('.')[rand(100)].lstrip.gsub(/<\/?[^>]*>/, "").gsub('\n','').downcase
+sentence = response.body.split('.')[rand(100)].lstrip.gsub(/<\/?[^>]*>/, "").gsub('\n','').gsub('{"text":"','').downcase
+
+#trim the sentence for Lisa
+short = sentence.gsub(",",'').split(' ')
+
+match = short[2] =~ /s$/
+unless match.nil?
+ short[2] = short[2][0...match]
+end 
+
+sentence = "#{short[0]} #{short[1]} #{short[2]}s" 
 
 #pick a single word for the potluck
 
@@ -24,9 +34,9 @@ if (rand(5) == 4)
 else
   status = "You probably haven't heard of #{sentence}."
 end
-
+#puts potlucks.sample
 puts status
-#puts sentence
-Twitter.update(status)
+#Twitter.update("You probably haven't heard of gluten-free mcsweeney's organics.")
+#Twitter.update(status)
 #Twitter.update("Wanna have a cosby sweater potluck?")
 
