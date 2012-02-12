@@ -23,16 +23,13 @@ end
 
 sentence = "#{short[0]} #{short[1]} #{short[2]}s" 
 
-#pick a single word for the potluck
-
 potlucks = ["Thundercats","squid","whatever","tattooed","letterpress","skateboard","Williamsburg","Portland","freegan","lo-fi","Brooklyn","hoodie","leggings","mustache","food truck","raw denim","jean shorts","tofu","trust fund","beard","wolf moon","DIY","fixie","farm-to-table","seitan","put a bird on it","VHS","mixtape","photo booth","artisan","scenester"]
 
-#puts "Wanna have a #{potlucks.sample} potluck?"
 
-if (rand(5) == 4)
+if (rand(8) == 4)
   status = "Wanna have a #{potlucks.sample} potluck?" 
 else
   status = "You probably haven't heard of #{sentence}."
 end
-
+puts status
 Twitter.update(status)
