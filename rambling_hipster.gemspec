@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'rambling_hipster'
-  s.version     = '0.0.1'
+  s.version     = '0.0.2'
   s.date        = '2013-07-29'
   s.summary     = "A rambling hipster"
   s.description = "Generates a rambling hipster sentence, short enough for a tweet"

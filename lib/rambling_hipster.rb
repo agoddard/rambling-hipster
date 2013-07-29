@@ -22,6 +22,6 @@ class RamblingHipster
     else
       status = "You probably haven't heard of #{sentence} #{final}."
     end
-    puts status
+    return status
   end
 end
