@@ -1,6 +1,6 @@
 For all those occasions where you just want to hear what a crazy rambling hipster thinks.
 
-Vocabulary courtesy of http://hipsteripsum.com
+Vocabulary courtesy of http://hipsteripsum.me
 
 
 Install:
